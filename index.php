@@ -15,6 +15,9 @@
     <link href="css/bootstrap-icons.css" rel="stylesheet" />
 
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -1302,6 +1305,22 @@ https://templatemo.com/tm-581-kind-heart-charity
       </section>
     -->
     </main>
+    <div class="chat-container">
+      <div class="chat-window">
+          <button id="minimize-button">-</button>
+          <div class="messages" id="messages"></div>
+          <div id="options-container">
+              <button class="option-btn" data-option="1">Cotización</button>
+              <button class="option-btn" data-option="2">Diseño</button>
+              <button class="option-btn" data-option="3">Hola</button>
+              <div id="response-container"></div>
+          </div>
+      </div>
+      <div class="input-container">
+          <input type="text" id="message-input" placeholder="Escribe tu mensaje aquí...">
+          <button id="send-button" class="option-btn">Enviar</button>
+      </div>
+  </div>
 
     <footer class="site-footer">
       <div class="container">
@@ -1402,7 +1421,40 @@ https://templatemo.com/tm-581-kind-heart-charity
         </div>
       </div>
     </footer>
+    <script>
+      document.getElementById('minimize-button').addEventListener('click', function () {
+          const chatWindow = document.querySelector('.chat-window');
+          chatWindow.classList.toggle('minimized');
+      });
+  </script>
+  <script>
+      var optionButtons = document.getElementsByClassName("option-btn");
+      var responseContainer = document.getElementById("response-container");
 
+      for (var i = 0; i < optionButtons.length; i++) {
+          optionButtons[i].addEventListener("click", function (event) {
+              var option = event.target.getAttribute("data-option");
+              var response = "";
+
+              switch (option) {
+                  case "1":
+                  response = "Con gusto te podemos apoyar con la cotización de tu proyecto, puedes solicitar una cita en el siguiente link.";
+                  break;
+                  case "2":
+                  response = "Contamos con diferentes diseños predeterminados para tu pagina.";
+                  break;
+                  case "3":
+                  response = "Hola buen día, bienvenido a GABCY. ¿En que puedo ayudarte?.";
+                  break;
+                  default:
+                  response = "No se ha seleccionado ninguna opción válida.";
+              }
+
+              responseContainer.innerHTML = response;
+          });
+      }
+
+  </script>
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1410,5 +1462,10 @@ https://templatemo.com/tm-581-kind-heart-charity
     <script src="js/click-scroll.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/chatboot.js"></script>
   </body>
 </html>
+<div id="chat-container" style="display: none;">
+
+    <div id="response-container"></div>
+</div>
