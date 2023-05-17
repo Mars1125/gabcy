@@ -24,12 +24,15 @@ https://templatemo.com/tm-581-kind-heart-charity
 
 -->
 </head>
+<?php
+require "./php/conexion.php";
+?>
 
 <body>
    <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12 mx-auto">
-                        <form class="custom-form donate-form" action="#" method="get" role="form">
+                        <form class="custom-form donate-form" action="./php/registro.php" method="POST" role="form">
                             <h3 class="mb-4">Registrarse</h3>
                             <div class="row">
                                 <div class="col-lg-12 col-12">
@@ -90,6 +93,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">
+                                    <a href="./src/Aviso_de_Privacidad_GABCY.pdf" target="_blank">Terminos y condiciones</a>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="DonationPayment" id="flexRadioDefault9">
                                         <label class="form-check-label" for="flexRadioDefault9">
@@ -99,7 +103,7 @@ https://templatemo.com/tm-581-kind-heart-charity
                                     </div>
 
                                     <button type="submit" class="form-control my-4">Registrarse</button>
-                                    <a href="index.html"><button class="form-control my-4">Cancelar</button></a>
+                                    <a href="index.php"><button class="form-control my-4">Cancelar</button></a>
                                 </div>
                                 <br>
                                 <hr>

@@ -12,7 +12,7 @@ $respuestas = [
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $mensaje_usuario = $_POST['message'];
+    $mensaje_usuario = $_POST['message-input'];
     $mensaje_usuario = strtolower(trim($mensaje_usuario));
 
     // Busca palabras clave en el mensaje del usuario y selecciona una respuesta adecuada
