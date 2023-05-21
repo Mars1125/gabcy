@@ -11,7 +11,14 @@
     <link href="css/bootstrap-icons.css" rel="stylesheet" />
     <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
+    <?php
+    session_start();  
+    /*
+    session_start();
+    session_unset();
+    session_destroy();
+    */
+    ?>
   </head>
 
   <body id="section_1">
@@ -127,13 +134,19 @@
 
             
           -->
+            <?php
+              if(empty($_SESSION['correo_usuario'])){                      
+            ?>
             <li class="nav-item ms-3">
               <a
                 class="nav-link custom-btn custom-border-btn btn"
-                href="registro.html"
+                href="registro.php"
                 >Registrarse</a
               >
             </li>
+            <?php
+              }  
+            ?>
           </ul>
         </div>
       </div>

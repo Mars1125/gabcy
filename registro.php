@@ -108,7 +108,7 @@ require "./php/conexion.php";
                                 <br>
                                 <hr>
                                 <div class="col-lg-12 col-12">
-                                    <h6 class="my-3">Si ya tienes cuenta, <a href="iniciarSesion.html">inicia sesion aqui</a></h6>
+                                    <h6 class="my-3">Si ya tienes cuenta, <a href="iniciarSesion.php">inicia sesion aqui</a></h6>
                                 </div>
                             </div>
                         </form>
