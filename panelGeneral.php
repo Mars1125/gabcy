@@ -15,7 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 </head>
 
-<body>
+<body class="body-panel">
     <header class="site-header">
         <div class="container">
             <div class="row">
@@ -71,82 +71,45 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="panelGeneral.php">Panel General</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link click-scroll" href="index.php">Home</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--linea de procesos--->
-    <div class="container pt-3">
-        <section class="mt-4">
-            <div class="container">
-                <div class="accordion" id="accordionExample">
-                    <div class="steps">
-                        <progress id="progress" value=0 max=100></progress>
-                        <div class="step-item">
-                            <button class="step-button text-center" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1
-                            </button>
-                            <div class="step-title">
 
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2
-                            </button>
-                            <div class="step-title">
-
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3
-                            </button>
-                            <div class="step-title">
-
-                            </div>
-                        </div>
-                    </div>
+    <div class="container container-panel mb-5 pb-5">
+        <div class="row container justify-content-center mt-4">
+            <h6 class="title-panel">Proyectos Actuales</h6>
+            <div class="card text-center mb-3 me-2 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Nombre del Proyecto</h5>
+                    <p class="card-text">Link del Proyecto</p>
+                    <a href="procesoProyecto.php" class="btn px-5 border border-dark-subtle rounded-pill ">Chat</a>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <div class="container container-general pb-5 pt-5">
-        <div class="row container-title py-1 rounded-3 border border-dark-subtle ">
-            <div class="col-lg-3 col-md-3 d-sm-block col-sm-12 mt-2">
-                <p>Proyecto</p>
-            </div>
-            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12 mt-2">
-                <p class="px-5">Chat</p>
-            </div>
         </div>
-        <div class="row border border-top-0 border-dark-subtle ">
-            <div class="col-lg-3 col-md-3 d-sm-block col-sm-12">
-                <h6 class="mt-3">Nombre del Proyecto</h6>
-            </div>
-            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12">
-                <p class="text-center message-date mt-4 fw-semibold">20/02/2023</p>
-                <p class="fw-semibold message-date">Nombre del Cliente</p>
-                <p class="px-5 py-2 mt-3 message-client rounded-5 rounded-end-circle">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
-                    quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
-                <p class="fw-semibold message-date">Gabcy</p>
-                <p class="px-5 py-2 mt-3 message-gabcy rounded-5 rounded-end-circle">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
-                    quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
-
-            </div>
+        <div class="row container mt-3">
+            <h6>Historial</h6>
+            <table class="table shadow p-3 mb-5 bg-body-tertiary rounded mt-3">
+                <thead>
+                    <tr class="p-3">
+                        <th scope="col">Nombre del Proyecto</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
+
     <footer class="site-footer mt-5">
         <div class="container">
             <div class="row">
@@ -214,32 +177,13 @@
             </div>
         </div>
     </footer>
-
     <!-- JAVASCRIPT FILES -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.sticky.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
-    <script>
-        const stepButtons = document.querySelectorAll('.step-button');
-        const progress = document.querySelector('#progress');
 
-        Array.from(stepButtons).forEach((button, index) => {
-            button.addEventListener('click', () => {
-                progress.setAttribute('value', index * 100 / (stepButtons.length - 1));//there are 3 buttons. 2 spaces.
-
-                stepButtons.forEach((item, secindex) => {
-                    if (index > secindex) {
-                        item.classList.add('done');
-                    }
-                    if (index < secindex) {
-                        item.classList.remove('done');
-                    }
-                })
-            })
-        })
-    </script>
 </body>
 
 </html>

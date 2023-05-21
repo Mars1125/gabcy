@@ -1,9 +1,10 @@
+*{
+}
+
 section{
   width:100%;
 }
-/*  unnecessary finished*/
 
-/* CSS */
 .steps {
     display: flex;
     justify-content: space-between;
@@ -49,6 +50,27 @@ section{
 
 #progress::-webkit-progress-bar {
     background-color: #b1b1b1;
+
+}
+.container-panel{
+    background-color: #fff;
+}
+.body-panel{
+}
+.container-general{
+    background-color: #fff !important;
+}
+.container-title{
+    background-color: #d7d5d55b;
+}
+.message-client{
+    background-color: #f8f9fa;
+}
+.message-gabcy{
+    background-color: #5abfab5e;
+}
+.message-date{
+    font-size: 14px;
 
 }
 
