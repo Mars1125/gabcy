@@ -143,6 +143,11 @@
                 <p class="px-5 py-2 mt-3 message-gabcy rounded-5 rounded-end-circle">Lorem ipsum dolor sit amet
                     consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
                     quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
+                <div class="row my-5">
+                    <div class="col-8"><input type="text" class="form-control px-4  " placeholder="chat message" /></div>
+                    <div class="col-4"> <button class=" btn custom-btn-message custom-border-btn">Enviar</button>
+                    </div>
+                </div>
 
             </div>
         </div>
