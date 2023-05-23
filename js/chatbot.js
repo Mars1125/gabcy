@@ -37,7 +37,7 @@ function getCurrentTimestamp() {
 	setTimeout(function () {
 	  message.addClass('appeared');
 	}, 0);
-	messagesContainer.animate({ scrollTop: messagesContainer.prop('scrollHeight') }, 300);
+	messagesContainer.animate({ scrollTop: messagesContainer.prop('scrollHeight') }, 500);
   }
   
   /**
