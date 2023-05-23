@@ -1755,4 +1755,21 @@ blockquote::before {
     padding: 25px;
   }
 }
+.table-head{
+  background-color: #597081 !important;
+  color: white;
+}
+table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+}
 
+th, td {
+  padding: 1em;
+  background: #ddd;
+  border-bottom: 2px solid white; 
+}
+.dropdown{
+  z-index: 20000 !important;
+}
