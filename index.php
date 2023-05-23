@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>GABCY</title> 
-    <!-- CSS FILES -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/bootstrap-icons.css" rel="stylesheet" />
-    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>GABCY</title>
+  <!-- CSS FILES -->
+  <script src="https://kit.fontawesome.com/829c14c86b.js" crossorigin="anonymous"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/chatbot.css">
+</head>
 
-  <body id="section_1">
-    <header class="site-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-12 d-flex flex-wrap">
-            <p class="d-flex me-4 mb-0">
-              <i class="bi-geo-alt me-2"></i>
-              Cuautitlan
-            </p>
+<body id="section_1">
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-12 d-flex flex-wrap">
+          <p class="d-flex me-4 mb-0">
+            <i class="bi-geo-alt me-2"></i>
+            Cuautitlan
+          </p>
 
-            <p class="d-flex mb-0">
-              <i class="bi-envelope me-2"></i>
+          <p class="d-flex mb-0">
+            <i class="bi-envelope me-2"></i>
 
-              <a href="mailto:info@company.com">nancy_fonseca1@hotmail.com</a>
-            </p>
-          </div>
+            <a href="mailto:info@company.com">nancy_fonseca1@hotmail.com</a>
+          </p>
+        </div>
 
-          <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-            <ul class="social-icon">
-              <li class="social-icon-item">
-                <a href="#" class="social-icon-link bi-twitter"></a>
-              </li>
+        <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+          <ul class="social-icon">
+            <li class="social-icon-item">
+              <a href="#" class="social-icon-link bi-twitter"></a>
+            </li>
 
-              <li class="social-icon-item">
-                <a href="#" class="social-icon-link bi-facebook"></a>
-              </li>
+            <li class="social-icon-item">
+              <a href="#" class="social-icon-link bi-facebook"></a>
+            </li>
 
-              <li class="social-icon-item">
-                <a href="#" class="social-icon-link bi-instagram"></a>
-              </li>
+            <li class="social-icon-item">
+              <a href="#" class="social-icon-link bi-instagram"></a>
+            </li>
 
-              <li class="social-icon-item">
-                <a href="#" class="social-icon-link bi-youtube"></a>
-              </li>
+            <li class="social-icon-item">
+              <a href="#" class="social-icon-link bi-youtube"></a>
+            </li>
 
-              <li class="social-icon-item">
-                <a href="#" class="social-icon-link bi-whatsapp"></a>
-              </li>
-            </ul>
-          </div>
+            <li class="social-icon-item">
+              <a href="#" class="social-icon-link bi-whatsapp"></a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="images/causes/brand.jpeg"
-            class=" img-fluid"
-            alt="Kind Heart Charity"
-           width="250px"/>
-          
-        </a>
+  <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/causes/brand.jpeg" class=" img-fluid" alt="Kind Heart Charity" width="250px" />
 
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      </a>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link click-scroll" href="#top">Home</a>
-            </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <li class="nav-item">
-              <a class="nav-link click-scroll" href="#section_2">Acerca De</a>
-            </li>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link click-scroll" href="#top">Home</a>
+          </li>
 
-            <li class="nav-item">
-              <a class="nav-link click-scroll" href="#section_3">Soluciones</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link click-scroll" href="#section_2">Acerca De</a>
+          </li>
 
-           <!---- <li class="nav-item">
+          <li class="nav-item">
+            <a class="nav-link click-scroll" href="#section_3">Soluciones</a>
+          </li>
+
+          <!---- <li class="nav-item">
               <a class="nav-link click-scroll" href="#section_4">Volunteer</a>
             </li>
 
@@ -127,76 +118,46 @@
 
             
           -->
-            <li class="nav-item ms-3">
-              <a
-                class="nav-link custom-btn custom-border-btn btn"
-                href="registro.html"
-                >Registrarse</a
-              >
-            </li>
-          </ul>
-        </div>
+          <li class="nav-item ms-3">
+            <a class="nav-link custom-btn custom-border-btn btn" href="registro.php">Registrarse</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <main>
-      <section class="hero-section hero-section-full-height">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-lg-12 col-12 p-0">
-              <div
-                id="hero-slide"
-                class="carousel carousel-fade slide"
-                data-bs-ride="carousel"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="images/causes/cursos.jpg"
-                      class="carousel-image img-fluid"
-                      alt="..."
-                    />
+  <main>
+    <section class="hero-section hero-section-full-height">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-12 p-0">
+            <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/causes/cursos.jpg" class="carousel-image img-fluid" alt="..." />
 
-                    <div
-                      class="carousel-caption d-flex flex-column justify-content-end"
-                    >
-                      <h1>Soluciones</h1>
+                  <div class="carousel-caption d-flex flex-column justify-content-end">
+                    <h1>Soluciones</h1>
 
-                    </div>
                   </div>
+                </div>
 
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#hero-slide"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
+                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
 
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#hero-slide"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
+                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <!--<section class="section-padding">
+    <!--<section class="section-padding">
         <div class="container">
           <div class="row">
             <div class="col-lg-10 col-12 text-center mx-auto">
@@ -277,99 +238,95 @@
           </div>
         </div>
       </section>-->
-    
-      <section class="section-padding section-bg" id="section_2">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-12">
-              <div class="custom-text-box">
-                <h2 class="mb-2">¿Quienes Somos?</h2>
+
+    <section class="section-padding section-bg" id="section_2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-12">
+            <div class="custom-text-box">
+              <h2 class="mb-2">¿Quienes Somos?</h2>
 
 
-                <p class="mb-0">
-                  Somos una consultoría con bases 
-                  organizacionales y con un equipo de trabajo 
-                  capacitado que ofrece servicios de tecnología 
-                  de información a los pequeños, medianos y 
-                  grandes negocios con el objetivo de brindar 
-                  soluciones de calidad adaptadas a las 
-                  necesidades de cada uno
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-12">
-              <div class="custom-text-box">
-                <h5 class="mb-3">Objetivo</h5>
-
-
-                <p class="mb-0">
-                  Satisfacer las necesidades de nuestros clientes 
-                  ofreciendo servicios de alta calidad que se 
-                  ajusten a las diferentes organizaciones 
-                  identificándonos con cada uno a través de un 
-                  análisis previo y dando solución por medio de 
-                  herramientas de tecnología de información 
-                  adaptables a sus requerimientos.
-                </p>
-              </div>
+              <p class="mb-0">
+                Somos una consultoría con bases
+                organizacionales y con un equipo de trabajo
+                capacitado que ofrece servicios de tecnología
+                de información a los pequeños, medianos y
+                grandes negocios con el objetivo de brindar
+                soluciones de calidad adaptadas a las
+                necesidades de cada uno
+              </p>
             </div>
           </div>
-              <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                  <div class="custom-text-box mb-lg-0">
-                    <h5 class="mb-3">Visión</h5>
+          <div class="col-lg-6 col-12">
+            <div class="custom-text-box">
+              <h5 class="mb-3">Objetivo</h5>
 
-                    <p>
-                      Estar siempre a la vanguardia de las tecnologías 
-                      de información, capacitándonos e innovando 
-                      en las diferentes estrategias informáticas para 
-                      dar solución eficaz y eficiente a nuestros 
-                      clientes
-                    </p>
 
-                  </div>
-                </div>
-
-                <div class="col-lg-6 col-md-6 col-12">
-                  <div class="custom-text-box mb-lg-0">
-                    <h5 class="mb-3">Misión</h5>
-
-                    <p>
-                      Satisfacer las necesidades de tecnologías de 
-                      información a las que están expuestos los 
-                      pequeños, medianos y grandes negocios
-                      ofreciendo servicios de calidad que partan de 
-                      un análisis previo que nos permita dar una 
-                      solución adaptable a los requerimientos de 
-                      cada uno
-                    </p>
-
-                  </div>
-                </div>
-
-                    
-
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p class="mb-0">
+                Satisfacer las necesidades de nuestros clientes
+                ofreciendo servicios de alta calidad que se
+                ajusten a las diferentes organizaciones
+                identificándonos con cada uno a través de un
+                análisis previo y dando solución por medio de
+                herramientas de tecnología de información
+                adaptables a sus requerimientos.
+              </p>
             </div>
           </div>
         </div>
-      </section>
-    
-      <section class="about-section section-padding" id="section_2">
-        <div class="container">
-          <div class="row">
-            <h2 class="text-center">Sobre Nosotros</h2>
-            <div class="row d-flex">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="custom-text-box mb-lg-0">
+              <h5 class="mb-3">Visión</h5>
+
+              <p>
+                Estar siempre a la vanguardia de las tecnologías
+                de información, capacitándonos e innovando
+                en las diferentes estrategias informáticas para
+                dar solución eficaz y eficiente a nuestros
+                clientes
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-12">
+            <div class="custom-text-box mb-lg-0">
+              <h5 class="mb-3">Misión</h5>
+
+              <p>
+                Satisfacer las necesidades de tecnologías de
+                información a las que están expuestos los
+                pequeños, medianos y grandes negocios
+                ofreciendo servicios de calidad que partan de
+                un análisis previo que nos permita dar una
+                solución adaptable a los requerimientos de
+                cada uno
+              </p>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="about-section section-padding" id="section_2">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center">Sobre Nosotros</h2>
+          <div class="row d-flex">
             <div class="col-lg-6 col-md-5 col-12">
-              <img
-                src="images/"
-                class="about-image ms-lg-auto bg-light shadow-lg img-fluid"
-                alt=""
-              />
+              <img src="images/" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
             </div>
 
             <div class="col-lg-5 col-md-7 col-12">
@@ -406,38 +363,34 @@
 
             <div class="row d-flex">
               <div class="col-lg-6 col-md-5 col-12">
-                <img
-                  src="images/"
-                  class="about-image ms-lg-auto bg-light shadow-lg img-fluid"
-                  alt=""
-                />
+                <img src="images/" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
               </div>
-  
+
               <div class="col-lg-5 col-md-7 col-12">
                 <div class="custom-text-block">
                   <h2 class="mb-0">Gabriela Esquivel Gomez</h2>
-  
+
                   <p class="text-muted mb-lg-4 mb-md-4">Founding Partner</p>
-  
+
                   <p>
                     Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg
                     kohm tokito Professional charity theme based
                   </p>
-  
+
                   <p>
                     Sed leo nisl, posuere at molestie ac, suscipit auctor mauris.
                     Etiam quis metus
                   </p>
-  
+
                   <ul class="social-icon mt-4">
                     <li class="social-icon-item">
                       <a href="#" class="social-icon-link bi-twitter"></a>
                     </li>
-  
+
                     <li class="social-icon-item">
                       <a href="#" class="social-icon-link bi-facebook"></a>
                     </li>
-  
+
                     <li class="social-icon-item">
                       <a href="#" class="social-icon-link bi-instagram"></a>
                     </li>
@@ -449,233 +402,201 @@
             </div>
           </div>
         </div>
-      </section>
+    </section>
 
-      <section class="cta-section section-padding section-bg">
-        <div class="container">
-          <div class="row justify-content-center align-items-center">
-            <div class="col-lg-5 col-12 ms-auto">
-              <h2 class="mb-0">
-                Innovación a tu alcance<br />
-              </h2>
-            </div>
+    <section class="cta-section section-padding section-bg">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-5 col-12 ms-auto">
+            <h2 class="mb-0">
+              Innovación a tu alcance<br />
+            </h2>
+          </div>
 
-            <div class="col-lg-5 col-12">
-              <h5 class="me-4">Las tecnologias de la informacion son parte de tu vida</h5>
+          <div class="col-lg-5 col-12">
+            <h5 class="me-4">Las tecnologias de la informacion son parte de tu vida</h5>
 
-              
-            </div>
+
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--section soluciones
+    <!--section soluciones
 -->
-      <section class="section-padding" id="section_3">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12 col-12 text-center mb-4">
-              <h2 class="text-center">Soluciones</h2>
-            </div>
+    <section class="section-padding" id="section_3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-12 text-center mb-4">
+            <h2 class="text-center">Soluciones</h2>
+          </div>
 
-            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/software.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <div class="custom-block-wrap">
+              <img src="images/causes/software.jpg" class="custom-block-image img-fluid" alt="" />
 
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Software</h5>
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Software</h5>
 
-                    <ul class="p-0">
-                      <li>Programación web</li>
-                      <li>Sitios Web</li>
-                      <li>Aplicaciones Móviles</li>
-                      <li>Tiendas Online</li>
-                      <li>Intranets</li>
-                      <li>Plataformas Educativas</li>
-                      <li>RM y ERPs</li>
-                      <li>Aplicaciones Web</li>
-                    </ul>
+                  <ul class="p-0">
+                    <li>Programación web</li>
+                    <li>Sitios Web</li>
+                    <li>Aplicaciones Móviles</li>
+                    <li>Tiendas Online</li>
+                    <li>Intranets</li>
+                    <li>Plataformas Educativas</li>
+                    <li>RM y ERPs</li>
+                    <li>Aplicaciones Web</li>
+                  </ul>
 
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/hardware.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
-
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Hardware</h5>
-
-                    <ul class="p-0">
-                      <li>Consumibles</li>
-                      <li>Instalación de cibers</li>
-                      <li>Instalación de red</li>
-                      <li>Soporte Tecnico</li>
-                      <li>Venta de dispositivos</li>
-                    </ul>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/diseño.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
-
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Diseño</h5>
-
-                    <ul class="p-0">
-                      <li>Diseño Web</li>
-                      <li>Diseño de Marca</li>
-                      <li>Material Publicitario</li>
-                    </ul>
-
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/hosting.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
-
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Hosting</h5>
-                    <ul class="p-0">
-                      <li>Básico</li>
-                      <li>Premium</li>
-                      <li>Correo</li>
-                    </ul>
-
-                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row mt-3">
-            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/marketing.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
 
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Marketing</h5>
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <div class="custom-block-wrap">
+              <img src="images/causes/hardware.jpg" class="custom-block-image img-fluid" alt="" />
 
-                    <ul class="p-0">
-                      <li>Publicidad</li>
-                      <li>Content marketing</li>
-                      <li>E- mail marketing</li>
-                    </ul>
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Hardware</h5>
 
-                    
-                  </div>
+                  <ul class="p-0">
+                    <li>Consumibles</li>
+                    <li>Instalación de cibers</li>
+                    <li>Instalación de red</li>
+                    <li>Soporte Tecnico</li>
+                    <li>Venta de dispositivos</li>
+                  </ul>
+
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/cursos.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="custom-block-wrap">
+              <img src="images/causes/diseño.jpg" class="custom-block-image img-fluid" alt="" />
 
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Cursos</h5>
-                    <ul class="p-0">
-                      <li>Computación básico</li>
-                      <li>Computación intermedio</li>
-                      <li>Redes básico</li>
-                      <li>Seguridad básico</li>
-                      <li>Desarrollo web</li>
-                    </ul>
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Diseño</h5>
 
-                    
-                  </div>
+                  <ul class="p-0">
+                    <li>Diseño Web</li>
+                    <li>Diseño de Marca</li>
+                    <li>Material Publicitario</li>
+                  </ul>
+
+
                 </div>
               </div>
             </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="custom-block-wrap">
+              <img src="images/causes/hosting.jpg" class="custom-block-image img-fluid" alt="" />
 
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/empresas.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Hosting</h5>
+                  <ul class="p-0">
+                    <li>Básico</li>
+                    <li>Premium</li>
+                    <li>Correo</li>
+                  </ul>
 
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Capacitacion de Empresas</h5>
-                    <ul class="p-0">
-                      <li>Tecnologías de información</li>
-                      <li>Soporte técnico</li>
-                      <li>Gestión de Proyectos</li>
-                      <li>Programas básicos de diseño</li>
-                      <li>Mantenimiento de equipos</li>
-                    </ul>
-
-                    
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class="custom-block-wrap">
-                <img
-                  src="images/causes/impuestos.jpg"
-                  class="custom-block-image img-fluid"
-                  alt=""
-                />
-
-                <div class="custom-block">
-                  <div class="custom-block-body">
-                    <h5 class="mb-3">Declaraciones Personales</h5>
-                    <ul class="p-0">
-                      <li>Personas físicas</li>
-                      <li>Anual</li>
-  
-                    </ul>
-                    
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!----
+        <div class="row mt-3">
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <div class="custom-block-wrap">
+              <img src="images/causes/marketing.jpg" class="custom-block-image img-fluid" alt="" />
+
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Marketing</h5>
+
+                  <ul class="p-0">
+                    <li>Publicidad</li>
+                    <li>Content marketing</li>
+                    <li>E- mail marketing</li>
+                  </ul>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+            <div class="custom-block-wrap">
+              <img src="images/causes/cursos.jpg" class="custom-block-image img-fluid" alt="" />
+
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Cursos</h5>
+                  <ul class="p-0">
+                    <li>Computación básico</li>
+                    <li>Computación intermedio</li>
+                    <li>Redes básico</li>
+                    <li>Seguridad básico</li>
+                    <li>Desarrollo web</li>
+                  </ul>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="custom-block-wrap">
+              <img src="images/causes/empresas.jpg" class="custom-block-image img-fluid" alt="" />
+
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Capacitacion de Empresas</h5>
+                  <ul class="p-0">
+                    <li>Tecnologías de información</li>
+                    <li>Soporte técnico</li>
+                    <li>Gestión de Proyectos</li>
+                    <li>Programas básicos de diseño</li>
+                    <li>Mantenimiento de equipos</li>
+                  </ul>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="custom-block-wrap">
+              <img src="images/causes/impuestos.jpg" class="custom-block-image img-fluid" alt="" />
+
+              <div class="custom-block">
+                <div class="custom-block-body">
+                  <h5 class="mb-3">Declaraciones Personales</h5>
+                  <ul class="p-0">
+                    <li>Personas físicas</li>
+                    <li>Anual</li>
+
+                  </ul>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----
 
       <section class="volunteer-section section-padding" id="section_4">
         <div class="container">
@@ -1291,141 +1212,103 @@
         </div>
       </section>
     -->
-    </main>
-    <div class="chat-container">
-      <div class="chat-window">
-          <button id="minimize-button">-</button>
-          <div class="messages" id="messages"></div>
-          <div id="options-container">
-              <button class="option-btn" data-option="1">Cotización</button>
-              <button class="option-btn" data-option="2">Diseño</button>
-              <button class="option-btn" data-option="3">Hola</button>
-              <div id="response-container"></div>
-          </div>
-      </div>
-      <div class="input-container">
-          <input type="text" id="message-input" placeholder="Escribe tu mensaje aquí...">
-          <button id="send-button" class="option-btn">Enviar</button>
-      </div>
-  </div>
+  </main>
+ 
 
-    <footer class="site-footer">
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 col-md-6 col-12 mx-auto">
+          <h5 class="site-footer-title mb-3">Contacto</h5>
+
+          <p class="text-white d-flex mb-2">
+            <i class="bi-telephone me-2"></i>
+
+            <a href="tel: 305-240-9671" class="site-footer-link">
+              5559976844
+            </a>
+          </p>
+
+          <p class="text-white d-flex">
+            <i class="bi-envelope me-2"></i>
+
+            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+              vegainfo.11.03@gmail.com
+            </a>
+          </p>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer-bottom">
       <div class="container">
         <div class="row">
+          <div class="col-lg-6 col-md-7 col-12">
+            <p class="copyright-text mb-0">
+              Copyright GABCY© 2023
 
-          <div class="col-lg-4 col-md-6 col-12 mx-auto">
-            <h5 class="site-footer-title mb-3">Contacto</h5>
 
-            <p class="text-white d-flex mb-2">
-              <i class="bi-telephone me-2"></i>
-
-              <a href="tel: 305-240-9671" class="site-footer-link">
-                5559976844
-              </a>
             </p>
+          </div>
 
-            <p class="text-white d-flex">
-              <i class="bi-envelope me-2"></i>
+          <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+            <ul class="social-icon">
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-twitter"></a>
+              </li>
 
-              <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                vegainfo.11.03@gmail.com
-              </a>
-            </p>
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-facebook"></a>
+              </li>
 
-            
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-instagram"></a>
+              </li>
 
+              <li class="social-icon-item">
+                <a href="#" class="social-icon-link bi-linkedin"></a>
+              </li>
+
+              <li class="social-icon-item">
+                <a href="https://youtube.com/templatemo" class="social-icon-link bi-youtube"></a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <div class="site-footer-bottom">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 col-md-7 col-12">
-              <p class="copyright-text mb-0">
-                Copyright GABCY© 2023 
-                
-                
-              </p>
-            </div>
-
-            <div
-              class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto"
-            >
-              <ul class="social-icon">
-                <li class="social-icon-item">
-                  <a href="#" class="social-icon-link bi-twitter"></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a href="#" class="social-icon-link bi-facebook"></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a href="#" class="social-icon-link bi-instagram"></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a href="#" class="social-icon-link bi-linkedin"></a>
-                </li>
-
-                <li class="social-icon-item">
-                  <a
-                    href="https://youtube.com/templatemo"
-                    class="social-icon-link bi-youtube"
-                  ></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script>
-      document.getElementById('minimize-button').addEventListener('click', function () {
-          const chatWindow = document.querySelector('.chat-window');
-          chatWindow.classList.toggle('minimized');
-      });
-  </script>
-  <script>
-      var optionButtons = document.getElementsByClassName("option-btn");
-      var responseContainer = document.getElementById("response-container");
-
-      for (var i = 0; i < optionButtons.length; i++) {
-          optionButtons[i].addEventListener("click", function (event) {
-              var option = event.target.getAttribute("data-option");
-              var response = "";
-
-              switch (option) {
-                  case "1":
-                  response = "Con gusto te podemos apoyar con la cotización de tu proyecto, puedes solicitar una cita en el siguiente link.";
-                  break;
-                  case "2":
-                  response = "Contamos con diferentes diseños predeterminados para tu pagina.";
-                  break;
-                  case "3":
-                  response = "Hola buen día, bienvenido a GABCY. ¿En que puedo ayudarte?.";
-                  break;
-                  default:
-                  response = "No se ha seleccionado ninguna opción válida.";
-              }
-
-              responseContainer.innerHTML = response;
-          });
-      }
-
-  </script>
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/chatbot.js"></script>
-  </body>
+    </div>
+  </footer>
+  <div class="container">
+		<div class="row padded_row">
+			<!-- right side content -->
+			<div class="col-md-7">
+				<div class="chat_window">
+					<div class="top_menu">
+						<div class="title">GABCY</div>
+						<button id="toggle_button" class="toggle_button"><i class="fas fa-chevron-up"></i></button>
+					</div>
+					<!-- dynamically rendered -->
+					<ul class="messages"></ul>
+					<!-- input -->
+					<div class="bottom_wrapper">
+						<input id="msg_input" placeholder="Haz una pregunta..." />
+						<div id="send_button" class="app_button_1">Enviar</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <!-- JAVASCRIPT FILES -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/click-scroll.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
 </html>
-<div id="chat-container" style="display: none;">
-
-    <div id="response-container"></div>
-</div>
