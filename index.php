@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>GABCY</title>
-  <!-- CSS FILES -->
-  <script src="https://kit.fontawesome.com/829c14c86b.js" crossorigin="anonymous"></script>
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/bootstrap-icons.css" rel="stylesheet" />
-  <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/chatbot.css">
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>GABCY</title> 
+    <!-- CSS FILES -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <?php
+    session_start();  
+    /*
+    session_start();
+    session_unset();
+    session_destroy();
+    */
+    ?>
+  </head>
 
 <body id="section_1">
   <header class="site-header">
@@ -118,10 +123,21 @@
 
             
           -->
-          <li class="nav-item ms-3">
-            <a class="nav-link custom-btn custom-border-btn btn" href="registro.php">Registrarse</a>
-          </li>
-        </ul>
+            <?php
+              if(empty($_SESSION['correo_usuario'])){                      
+            ?>
+            <li class="nav-item ms-3">
+              <a
+                class="nav-link custom-btn custom-border-btn btn"
+                href="registro.php"
+                >Registrarse</a
+              >
+            </li>
+            <?php
+              }  
+            ?>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -596,9 +612,7 @@
         </div>
       </div>
     </section>
-    <!----
-
-      <section class="volunteer-section section-padding" id="section_4">
+<!----<section class="volunteer-section section-padding" id="section_4">
         <div class="container">
           <div class="row">
             <div class="col-lg-6 col-12">

@@ -16,6 +16,12 @@
     <link href="css/bootstrap-icons.css" rel="stylesheet">
 
     <link href="css/LogIn-Registro.css" rel="stylesheet">
+
+    <?php
+    
+    require "php/inicioSesion.php";
+
+    ?>
     <!--
 
 TemplateMo 581 Kind Heart Charity
@@ -28,9 +34,33 @@ https://templatemo.com/tm-581-kind-heart-charity
 <body>
    <div class="container login">
                 <div class="row">
-
                     <div class="col-lg-4 col-12 mx-auto">
-                        <form class="custom-form donate-form" action="#" method="get" role="form">
+                        <?php
+                            if(count($errores) == 1){
+                                ?>
+                                <div class="alert alert-danger text-center">
+                                    <?php
+                                    foreach($errores as $showerror){
+                                        echo $showerror;
+                                    }
+                                    ?>
+                                </div>
+                                <?php
+                            }elseif(count($errores) > 1){
+                                ?>
+                                <div class="alert alert-danger">
+                                    <?php
+                                    foreach($errores as $showerror){
+                                        ?>
+                                        <li><?php echo $showerror; ?></li>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+                                <?php
+                            }
+                        ?>
+                        <form class="custom-form donate-form" action="#" method="POST" role="form">
                             <h3 class="mb-4">Iniciar Sesión</h3>
 
                             <div class="row">
@@ -45,18 +75,18 @@ https://templatemo.com/tm-581-kind-heart-charity
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">
-                                    <input type="password" name="contrasena1" id="contrasena1" class="form-control" placeholder="" required="">
+                                    <input type="password" name="password" id="password" class="form-control" placeholder="" required="">
                                 </div>
 
                                 <div class="col-lg-12 col-12 mt-2">                                   
 
-                                    <button type="submit" class="form-control mt-4">Iniciar Sesión</button>
+                                    <button id="inicioSesion" name='inicioSesion' type="submit" class="form-control mt-4">Iniciar Sesión</button>
                                     <button class="form-control my-4">Cancelar</button>
                                 </div>
                                 <br>
                                 <hr>
                                 <div class="col-lg-12 col-12">
-                                    <h6 class="my-3">¿Aún no tienes cuenta? <a href="registro.html">Registrate aqui</a> </h6>
+                                    <h6 class="my-3">¿Aún no tienes cuenta? <a href="registro.php">Registrate aqui</a> </h6>
                                 </div>
                                 
                             </div>

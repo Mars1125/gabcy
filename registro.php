@@ -110,19 +110,18 @@ require "./php/conexion.php";
                                 </label>
                             </div>
 
-                            <button type="submit" class="form-control my-4">Registrarse</button>
-                            <a href="index.php"><button class="form-control my-4">Cancelar</button></a>
-                        </div>
-                        <br>
-                        <hr>
-                        <div class="col-lg-12 col-12">
-                            <h6 class="my-3">Si ya tienes cuenta, <a href="iniciarSesion.html">inicia sesion aqui</a>
-                            </h6>
-                        </div>
+                                    <button type="submit" class="form-control my-4">Registrarse</button>
+                                    <a href="index.php"><button class="form-control my-4">Cancelar</button></a>
+                                </div>
+                                <br>
+                                <hr>
+                                <div class="col-lg-12 col-12">
+                                    <h6 class="my-3">Si ya tienes cuenta, <a href="iniciarSesion.php">inicia sesion aqui</a></h6>
+                                </div>
+                            </div>
+                        </form>
+                        
                     </div>
-                </form>
-
-            </div>
 
         </div>
     </div>
