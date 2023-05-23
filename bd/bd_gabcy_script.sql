@@ -6,21 +6,12 @@ apellidos_usuario VARCHAR(100),
 correo_usuario VARCHAR(200),
 contrasena_usuario VARCHAR(100),
 telefono_usuario VARCHAR(15),
+empresa_usuario VARCHAR(100),
+cargo_usuario VARCHAR(100),
+rol_usuario VARCHAR(50),
 PRIMARY KEY(id_usuario)
 );
 
-CREATE TABLE cliente(
-id_usuario VARCHAR(25),
-empresa_cliente VARCHAR(100),
-cargo_cliente VARCHAR(100),
-FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
-);
-
-CREATE TABLE personal(
-id_usuario VARCHAR(25),
-cargo_personal VARCHAR(100),
-FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario)
-);
 
 CREATE TABLE funcion(
 id_funcion VARCHAR(25),
@@ -50,8 +41,10 @@ fecha_inicio_proyecto TIMESTAMP,
 fecha_fin_proyecto TIMESTAMP,
 url_proyecto VARCHAR(300),
 id_categoria VARCHAR(25),
+id_usuario VARCHAR(25),
 PRIMARY KEY (id_proyecto),
-FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria)
+FOREIGN KEY (id_categoria) REFERENCES categoria(id_categoria),
+FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
 
 CREATE TABLE etapa(
@@ -72,24 +65,15 @@ FOREIGN KEY (id_proyecto) REFERENCES proyecto(id_proyecto)
 
 CREATE TABLE cita(
 id_cita VARCHAR(25),
+id_proyecto VARCHAR(25),
+id_usuario VARCHAR(25),
 fecha_cita TIMESTAMP,
 motivo_cita VARCHAR(100),
-PRIMARY KEY (id_cita)
-);
-
-CREATE TABLE primera_cita(
-id_cita VARCHAR(25),
-id_usuario VARCHAR(25),
-FOREIGN KEY (id_cita) REFERENCES cita (id_cita),
+PRIMARY KEY (id_cita),
+FOREIGN KEY (id_proyecto) REFERENCES proyecto (id_proyecto),
 FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
 );
 
-CREATE TABLE proyecto_cita(
-id_cita VARCHAR(25),
-id_proyecto VARCHAR(25),
-FOREIGN KEY (id_cita) REFERENCES cita (id_cita),
-FOREIGN KEY (id_proyecto) REFERENCES proyecto (id_proyecto)
-);
 
 CREATE TABLE conversacion(
 id_conversacion VARCHAR(25),
