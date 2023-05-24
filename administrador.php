@@ -71,7 +71,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="index.php">Inicio</a>
+                        <a class="nav-link click-scroll" href="index.php">Home</a>
                     </li>
                 </ul>
             </div>
@@ -80,35 +80,48 @@
 
     <div class="container container-panel mb-5 pb-5">
         <div class="row container justify-content-center mt-4">
-            <h6 class="title-panel">Proyectos Actuales</h6>
-            <div class="card text-center mb-3 me-2 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">Nombre del Proyecto</h5>
-                    <p class="card-text">Link del Proyecto</p>
-                    <a href="procesoProyecto.php" class="btn px-5 border border-dark-subtle rounded-pill ">Chat</a>
-                </div>
+            <h5 class="title-panel mt-4">Administracion de Proyectos</h5>
+            <div class="row shadow p-3 mb-5 bg-body-tertiary rounded mt-4 p-5">
+                <table class="table table-striped table-hover ">
+
+                    <thead>
+                        <tr class="table-head ">
+                            <th scope="col">Proyecto</th>
+                            <th scope="col">Cliente</th>
+                            <th scope="col">Etapa</th>
+                            <th scope="col">Chat</th>
+                            <th scope="col">URL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td></td>
+                            <td>
+                                <a href="procesoProyecto.php"
+                                    class="btn  custom-btn-message custom-border-btn">Crear</a>
+                                <a href="procesoProyecto.php"
+                                    class="btn  custom-btn-message custom-border-btn">Actualizar</a>
+                            </td>
+                            <td> <a href="procesoProyecto.php"
+                                    class="btn px-5 custom-btn-message custom-border-btn">Chat</a>
+                            </td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
             </div>
+
+
         </div>
-        <div class="row container mt-3">
-            <h6>Historial</h6>
-            <table class="table shadow p-3 mb-5 bg-body-tertiary rounded mt-3">
-                <thead>
-                    <tr class="p-3">
-                        <th scope="col">Nombre del Proyecto</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+
     </div>
+
+
+
+
 
     <footer class="site-footer mt-5">
         <div class="container">
@@ -139,14 +152,14 @@
             </div>
         </div>
 
+
+
         <div class="site-footer-bottom">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-7 col-12">
                         <p class="copyright-text mb-0">
                             Copyright GABCY© 2023
-
-
                         </p>
                     </div>
 
