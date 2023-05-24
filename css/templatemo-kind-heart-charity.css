@@ -1380,7 +1380,8 @@ blockquote::before {
 -----------------------------------------*/
 .site-footer {
   background-color: var(--site-footer-bg-color);
-  padding-top: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .site-footer-bottom {
@@ -1536,9 +1537,7 @@ blockquote::before {
     padding-bottom: 40px;
   }
 
-  .donate-form {
-    padding: 35px;
-  }
+ 
 
   .navbar {
     padding-top: 6px;
@@ -1586,10 +1585,7 @@ blockquote::before {
     height: 60px;
   }
 
-  .news-detail-header-section {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
+  
 
   .cta-section::before {
     width: 150px;
@@ -1607,25 +1603,7 @@ blockquote::before {
     padding-bottom: 50px;
   }
 
-  .volunteer-section::after {
-    width: 300px;
-    height: 300px;
-  }
-
-  .testimonial-section::before {
-    width: 150px;
-    height: 150px;
-  }
-
-  .testimonial-section::after {
-    width: 200px;
-    height: 200px;
-  }
-
-  #testimonial-carousel .carousel-caption {
-    padding-top: 0;
-  }
-
+  
   blockquote {
     padding: 70px 30px 30px 30px;
   }
@@ -1635,11 +1613,6 @@ blockquote::before {
     height: 450px;
   }
 
-  .volunteer-image {
-    width: 250px;
-    height: 250px;
-    margin: 0;
-  }
 
   .custom-text-block {
     padding: 20px 0 0 0;
@@ -1659,9 +1632,7 @@ blockquote::before {
     padding-top: 0;
   }
 
-  .site-footer {
-    padding-top: 50px;
-  }
+  
 
   .copyright-text-wrap {
     justify-content: center;
@@ -1669,7 +1640,7 @@ blockquote::before {
 
   .site-footer-bottom {
     text-align: center;
-    margin-top: 50px;
+    
   }
 
   .site-footer-bottom .footer-menu {
@@ -1719,11 +1690,7 @@ blockquote::before {
     padding-bottom: 30px;
   }
 
-  .carousel-control-next-icon, 
-  .carousel-control-prev-icon {
-    width: 45px;
-    height: 45px;
-  }
+  
 
   .volunteer-image {
     width: 150px;
