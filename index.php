@@ -14,11 +14,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <?php
   session_start();
-  /*
-  session_start();
-  session_unset();
-  session_destroy();
-  */
+  require "php/enviarDuda.php";
+
+
   ?>
 </head>
 
@@ -508,12 +506,51 @@
           </div>
 
           <div class="col-lg-5 col-12 mx-auto">
-            <form class="custom-form contact-form" action="#" method="post" role="form">
+            <?php
+                if(count($info) == 1){
+                    ?>
+                    <div class="alert alert-success text-center">
+                        <?php
+                        foreach($info as $showinfo){
+                            echo $showinfo;
+                        }
+                        ?>
+                    </div>
+                    <?php
+                }
+            ?>            
+            <?php
+                if(count($errores) == 1){
+                    ?>
+                    <div class="alert alert-danger text-center">
+                        <?php
+                        foreach($errores as $showerror){
+                            echo $showerror;
+                        }
+                        ?>
+                    </div>
+                    <?php
+                }elseif(count($errores) > 1){
+                    ?>
+                    <div class="alert alert-danger">
+                        <?php
+                        foreach($errores as $showerror){
+                            ?>
+                            <li><?php echo $showerror; ?></li>
+                            <?php
+                        }
+                        ?>
+                    </div>
+                    <?php
+                }
+            ?>            
+            <form class="custom-form contact-form" id="contactoForm" method="POST" role="form">
               <h3>Formulario de Contacto</h3>
               <p class="mb-4">
                 Tambien puedes enviar un correo electronico a esta direccion:
                 <a href="#">nancy_fonseca1@hotmail.com</a>
               </p>
+              <!--
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-12">
                   <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Nombre"
@@ -525,14 +562,25 @@
                     required />
                 </div>
               </div>
-
+              
               <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
                 placeholder="Correo electronico" required />
-
+              -->
               <textarea name="message" rows="5" class="form-control" id="message"
                 placeholder="Como puedo ayudarte?"></textarea>
-
-              <button type="submit" class="form-control">Enviar</button>
+              
+              <?php
+                if (!empty($_SESSION['correo_usuario'])) {
+              ?>
+              <button name="enviarCita" type="submit" id="enviarCita" class="form-control">Enviar</button>
+              <?php
+                }else{
+              ?>
+              <button type="submit" name="enviarCita" disabled class="form-control">Enviar</button>
+              <p class="text-center mt-3">Necesitas iniciar sesión para agendar una cita. <a href="iniciarSesion.php">Inicia sesión.</a></p>
+              <?php
+                }
+              ?>
             </form>
           </div>
         </div>
@@ -587,6 +635,7 @@
   <script src="js/counter.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/chatbot.js"></script>
+  <script src="js/evitarRecargar.js"></script>
 </body>
 
 </html>
