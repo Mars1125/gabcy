@@ -1,3 +1,8 @@
+<?php
+session_start();
+require "php/proyectoactual.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -80,42 +85,69 @@
             </div>
         </div>
     </nav>
+    <?php $etapa = 4; ?>
     <!--linea de procesos--->
     <div class="container pt-3">
         <section class="mt-4">
             <div class="container">
-                <div class="accordion" id="accordionExample">
-                    <div class="steps">
-                        <progress id="progress" value=0 max=100></progress>
-                        <div class="step-item">
-                            <button class="step-button text-center" type="button" data-toggle="collapse"
-                                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                1
-                            </button>
-                            <div class="step-title">
+            <div class="accordion" id="accordionExample">
+    <div class="steps">
+        <progress id="progress" value="0" max="100"></progress>
+        <div class="step-item">
+            <button class="step-button text-center" type="button" data-toggle="collapse"
+                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" 
+                <?php echo ($etapa >= 1) ? '' : 'disabled'; ?>>
+                1
+            </button>
+            <div class="step-title">
 
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                2
-                            </button>
-                            <div class="step-title">
+            </div>
+        </div>
+        <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" 
+                <?php echo ($etapa >= 2) ? '' : 'disabled'; ?>>
+                2
+            </button>
+            <div class="step-title">
 
-                            </div>
-                        </div>
-                        <div class="step-item">
-                            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                3
-                            </button>
-                            <div class="step-title">
+            </div>
+        </div>
+        <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" 
+                <?php echo ($etapa >= 3) ? '' : 'disabled'; ?>>
+                3
+            </button>
+            <div class="step-title">
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
+        <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" 
+                <?php echo ($etapa >= 4) ? '' : 'disabled'; ?>>
+                4
+            </button>
+            <div class="step-title">
+
+            </div>
+        </div>
+        <div class="step-item">
+            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
+                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" 
+                <?php echo ($etapa >= 5) ? '' : 'disabled'; ?>>
+                5
+            </button>
+            <div class="step-title">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                
             </div>
         </section>
     </div>
@@ -131,7 +163,13 @@
         </div>
         <div class="row border border-top-0 border-dark-subtle ">
             <div class="col-lg-3 col-md-3 d-sm-block col-sm-12">
-                <h6 class="mt-3">Nombre del Proyecto</h6>
+                <h6 class="mt-3">
+                    <?php if (empty($nombreProyecto)) {
+        echo "Aún no tienes proyectos activos.";
+    } else {
+
+                    echo $nombreProyecto; }?>
+                </h6>
             </div>
             <div class="col-lg-9 col-md-9 d-sm-block col-sm-12">
                 <p class="text-center message-date mt-4 fw-semibold">20/02/2023</p>
@@ -144,7 +182,8 @@
                     consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
                     quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
                 <div class="row my-5">
-                    <div class="col-8"><input type="text" class="form-control px-4  " placeholder="chat message" /></div>
+                    <div class="col-8"><input type="text" class="form-control px-4  " placeholder="chat message" />
+                    </div>
                     <div class="col-4"> <button class=" btn custom-btn-message custom-border-btn">Enviar</button>
                     </div>
                 </div>

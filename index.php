@@ -92,14 +92,17 @@
               <a class="nav-link custom-btn custom-border-btn btn" href="registro.php">Registrarse</a>
             </li>
             <?php
-          }else{
-          ?>
+          } else {
+            ?>
+            <li class="nav-item">
+              <a class="nav-link click-scroll" href="procesoProyecto.php">Ver mi proyecto</a>
+            </li>
             <li class="nav-item ms-3">
               <a class="nav-link custom-btn custom-border-btn btn" href="php/cerrarSesion.php">Cerrar Sesión</a>
             </li>
             <?php
           }
-            ?>
+          ?>
         </ul>
       </div>
     </div>
