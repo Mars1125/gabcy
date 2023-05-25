@@ -22,18 +22,20 @@ require "conexion.php";
 }
 $id_usuario= generarID($nombres, $apellidos, $empresa);
   
-  $sql = "INSERT INTO usuario (id_usuario, nombres_usuario, apellidos_usuario, correo_usuario, contrasena_usuario, telefono_usuario) 
-  VALUES ('$id_usuario','$nombres', '$apellidos', '$correo', '$contrasena1', '$telefono')";
+  $sql = "INSERT INTO usuario (id_usuario, nombres_usuario, apellidos_usuario, correo_usuario, contrasena_usuario, telefono_usuario,empresa_usuario,cargo_usuario,rol_usuario) 
+  VALUES ('$id_usuario','$nombres', '$apellidos', '$correo', '$contrasena1', '$telefono','$empresa','$cargo','0')";
   $resultado=mysqli_query($conexion,$sql);
+  /*
   $sql = "INSERT INTO cliente (id_usuario, empresa_cliente, cargo_cliente) 
   VALUES ('$id_usuario','$empresa','$cargo')" ;
   $resultado1=mysqli_query($conexion,$sql);
+  */
 ?>
 <html>
 <div class="container">
         <div class="row">
             <div class="row" style="text-align:center">
-                <?php if($resultado1) { ?>
+                <?php if($resultado) { ?>
                     <h3>Registro guardado</h3>
                     <?php } else { ?>
                     <h3>Error al guardar</h3>
