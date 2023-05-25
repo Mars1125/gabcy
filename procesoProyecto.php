@@ -1,7 +1,15 @@
 <?php
 session_start();
-require "php/proyectoactual.php";
+require "php/traerProyecto.php";
+while ($row = mysqli_fetch_array($resTraerProyectos)) {
+    $id_proyecto = $row['id_proyecto'];
+    $_SESSION["id_proyecto"] = $id_proyecto;
+    $nombre_proyecto = $row['nombre_proyecto'];
+    $fecha_inicio_proyecto = $row['fecha_inicio_proyecto'];
+    $url_proyecto = $row['url_proyecto'];
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,73 +93,6 @@ require "php/proyectoactual.php";
             </div>
         </div>
     </nav>
-    <?php $etapa = 4; ?>
-    <!--linea de procesos--->
-    <div class="container pt-3">
-        <section class="mt-4">
-            <div class="container">
-            <div class="accordion" id="accordionExample">
-    <div class="steps">
-        <progress id="progress" value="0" max="100"></progress>
-        <div class="step-item">
-            <button class="step-button text-center" type="button" data-toggle="collapse"
-                data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" 
-                <?php echo ($etapa >= 1) ? '' : 'disabled'; ?>>
-                1
-            </button>
-            <div class="step-title">
-
-            </div>
-        </div>
-        <div class="step-item">
-            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" 
-                <?php echo ($etapa >= 2) ? '' : 'disabled'; ?>>
-                2
-            </button>
-            <div class="step-title">
-
-            </div>
-        </div>
-        <div class="step-item">
-            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" 
-                <?php echo ($etapa >= 3) ? '' : 'disabled'; ?>>
-                3
-            </button>
-            <div class="step-title">
-
-            </div>
-        </div>
-        <div class="step-item">
-            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" 
-                <?php echo ($etapa >= 4) ? '' : 'disabled'; ?>>
-                4
-            </button>
-            <div class="step-title">
-
-            </div>
-        </div>
-        <div class="step-item">
-            <button class="step-button text-center collapsed" type="button" data-toggle="collapse"
-                data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive" 
-                <?php echo ($etapa >= 5) ? '' : 'disabled'; ?>>
-                5
-            </button>
-            <div class="step-title">
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-                
-            </div>
-        </section>
-    </div>
-
     <div class="container container-general pb-5 pt-5">
         <div class="row container-title py-1 rounded-3 border border-dark-subtle ">
             <div class="col-lg-3 col-md-3 d-sm-block col-sm-12 mt-2">
@@ -164,31 +105,65 @@ require "php/proyectoactual.php";
         <div class="row border border-top-0 border-dark-subtle ">
             <div class="col-lg-3 col-md-3 d-sm-block col-sm-12">
                 <h6 class="mt-3">
-                    <?php if (empty($nombreProyecto)) {
-        echo "Aún no tienes proyectos activos.";
-    } else {
+                    <?php if (empty($nombre_proyecto)) {
+                        echo "Aún no tienes proyectos activos.";
+                    } else {
 
-                    echo $nombreProyecto; }?>
+                        echo $nombre_proyecto;
+                    } ?>
                 </h6>
             </div>
             <div class="col-lg-9 col-md-9 d-sm-block col-sm-12">
-                <p class="text-center message-date mt-4 fw-semibold">20/02/2023</p>
-                <p class="fw-semibold message-date">Nombre del Cliente</p>
-                <p class="px-5 py-2 mt-3 message-client rounded-5 rounded-end-circle">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
-                    quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
-                <p class="fw-semibold message-date">Gabcy</p>
-                <p class="px-5 py-2 mt-3 message-gabcy rounded-5 rounded-end-circle">Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Dolore explicabo quisquam qui, neque accusamus rerum repudiandae earum
-                    quam ratione ipsum illum, quaerat officiis, consequuntur vero! Mollitia ullam quod unde fuga.</p>
-                <div class="row my-5">
-                    <div class="col-8"><input type="text" class="form-control px-4  " placeholder="chat message" />
+                <?php
+                require "php/conexion.php";
+                $sql1 = "SELECT * FROM conversacion WHERE id_proyecto = '$id_proyecto'";
+                $result1 = mysqli_query($conexion, $sql1);
+                while ($row1 = mysqli_fetch_array($result1)) {
+                    $id_conversacion = $row1['id_conversacion'];
+                    $sql = "SELECT * FROM mensaje WHERE id_proyecto = '$id_conversacion'";
+                    $result = mysqli_query($conexion, $sql);
+                    while ($row = mysqli_fetch_array($result)) {
+                        $_SESSION['id_conversacion'] = $row['id_conversacion'];
+                        $id_mensaje = $row['id_mensaje'];
+                        $id_usuario_envia = $row['id_usuario_envia'];
+                        $mensaje = $row['texto_mensaje'];
+                        $fecha = $row['fecha_mensaje'];
+                        $sql2 = "SELECT * FROM usuario WHERE id_usuario = '$id_usuario_envia'";
+                        $result2 = mysqli_query($conexion, $sql2);
+                        while ($row2 = mysqli_fetch_array($result2)) {
+                            $nombre_usuario = $row2['nombres_usuario'];
+                            $apellido_usuario = $row2['apellidos_usuario'];
+                            $empresa_usuario = $row2['empresa_usuario'];
+                            $nombre_completo = $nombre_usuario . " " . $apellido_usuario . " - " . $empresa_usuario;
+                            ?>
+                            <p class="text-center message-date mt-4 fw-semibold">
+                                <?php echo $fecha; ?>
+                            </p>
+                            <p class="fw-semibold message-date">
+                                <?php echo $nombre_completo ?>
+                            </p>
+                            <p class="px-5 py-2 mt-3 message-client rounded-5 rounded-end-circle">
+                                <?php echo $mensaje; ?>
+                            </p>
+                            <?php
+                        }
+                    }
+                }
+                ?>
+                <div>
+                <form action="php/enviarMensaje.php" method="POST">
+                    <div class="row">
+                        <div class="col-lg-9 col-md-9 d-sm-block col-sm-12">
+                            <input type="text" name="mensaje" class="form-control" placeholder="Escribe tu mensaje">
+                        </div>
+                        <div class="col-lg-3 col-md-3 d-sm-block col-sm-12">
+                            <input type="submit" class="btn btn-primary" value="Enviar">
+                        </div>
                     </div>
-                    <div class="col-4"> <button class=" btn custom-btn-message custom-border-btn">Enviar</button>
-                    </div>
-                </div>
-
+                </form>
             </div>
+            </div>
+            
         </div>
     </div>
     <footer class="site-footer mt-5">
