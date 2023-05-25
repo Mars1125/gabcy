@@ -1,3 +1,8 @@
+<?php
+session_start();
+require("php/traerProyecto.php");
+require("php/traerProyectoHistorico.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -77,17 +82,30 @@
             </div>
         </div>
     </nav>
-
     <div class="container container-panel mb-5 pb-5">
         <div class="row container justify-content-center mt-4">
             <h6 class="title-panel">Proyectos Actuales</h6>
+            <!-- Card de proyectos -->
+            <?php
+                if(mysqli_num_rows($resTraerProyectosHistorico)>0){                    
+                    while($fetchTraerProyectosHistorico=mysqli_fetch_assoc($resTraerProyectosHistorico)){
+                        $idProyecto=$fetchTraerProyectosHistorico["id_proyecto"];
+                        $nombreProyecto=$fetchTraerProyectosHistorico["nombre_proyecto"];
+                        $urlProyecto=$fetchTraerProyectosHistorico["url_proyecto"];
+            ?>
             <div class="card text-center mb-3 me-2 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Nombre del Proyecto</h5>
-                    <p class="card-text">Link del Proyecto</p>
-                    <a href="procesoProyecto.php" class="btn px-5 border border-dark-subtle rounded-pill ">Chat</a>
+                    <h5 class="card-title"><?php echo $nombreProyecto; ?></h5>
+                    <p class="card-text"><?php echo $urlProyecto; ?></p>
+                    <a href="procesoProyecto.php?id=<?php echo $idProyecto; ?>" class="btn px-5 border border-dark-subtle rounded-pill ">Chat</a>
                 </div>
             </div>
+            <?php   
+                    }
+                }else{
+                    echo "No hay proyectos para mostrar";
+                }
+            ?>
         </div>
         <div class="row container mt-3">
             <h6>Historial</h6>
@@ -100,11 +118,26 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Card de proyectos -->
+                    <?php
+                        if(mysqli_num_rows($resTraerProyectos)>0){              
+                            while($fetchTraerProyectosHistorico=mysqli_fetch_assoc($resTraerProyectos)){   
+                                $idProyecto=$fetchTraerProyectosHistorico["id_proyecto"];
+                                $nombreProyecto=$fetchTraerProyectosHistorico["nombre_proyecto"];
+                                $fechaProyecto=$fetchTraerProyectosHistorico["fecha_inicio_proyecto"];
+                                $urlProyecto=$fetchTraerProyectosHistorico["url_proyecto"];
+                    ?>
                     <tr>
-                        <th scope="row"></th>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><?php echo $nombreProyecto; ?></th>
+                        <td><?php echo $nombreProyecto; ?></td>
+                        <td><?php echo $fechaProyecto; ?></td>
                     </tr>
+                    <?php   
+                            }
+                        }else{
+                            echo "No hay proyectos para mostrar";
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
