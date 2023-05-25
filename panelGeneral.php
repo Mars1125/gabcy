@@ -96,14 +96,16 @@ require("php/traerProyectoHistorico.php");
             <div class="card text-center mb-3 me-2 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $nombreProyecto; ?></h5>
-                    <p class="card-text"><?php echo $urlProyecto; ?></p>
+                    <p><a target="_blank" href="<?php echo $urlProyecto; ?>"><?php echo $urlProyecto; ?></a></p>
                     <a href="procesoProyecto.php?id=<?php echo $idProyecto; ?>" class="btn px-5 border border-dark-subtle rounded-pill ">Chat</a>
                 </div>
             </div>
             <?php   
                     }
                 }else{
-                    echo "No hay proyectos para mostrar";
+                    ?>
+                    <p class="text-center">No hay proyectos para mostrar</p>
+                    <?php
                 }
             ?>
         </div>
@@ -129,13 +131,15 @@ require("php/traerProyectoHistorico.php");
                     ?>
                     <tr>
                         <th scope="row"><?php echo $nombreProyecto; ?></th>
-                        <td><?php echo $nombreProyecto; ?></td>
                         <td><?php echo $fechaProyecto; ?></td>
+                        <td><a target="_blank" href="<?php echo $urlProyecto; ?>"><?php echo $urlProyecto; ?></a></td>
                     </tr>
                     <?php   
                             }
                         }else{
-                            echo "No hay proyectos para mostrar";
+                            ?>
+                                <p class="text-center">No hay proyectos para mostrar</p>
+                            <?php
                         }
                     ?>
                 </tbody>
