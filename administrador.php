@@ -93,25 +93,41 @@
                             <th scope="col">URL</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody><?php 
+                    require "php/conexion.php";
+                    $proyectos="SELECT * FROM proyecto";
+                    $resultado=mysqli_query($conexion,$proyectos);
+                    while($row=mysqli_fetch_array($resultado)){
+                        $id_proyecto=$row['id_proyecto'];
+                        $nombre_proyecto=$row['nombre_proyecto'];
+                        $id_cliente=$row['id_usuario'];
+                        $url=$row['url_proyecto'];
+                       
+                        ?>
                         <tr>
-                            <th scope="row">1</th>
-                            <td></td>
+                            
+                            <td><?php echo $nombre_proyecto;?></td>
+                            <td><?php echo $id_cliente;?></td>
+                            <td> <a href="procesoProyecto.php?id_proyecto=<?php echo $id_proyecto;?>"
+                                    class="btn px-5 custom-btn-message custom-border-btn">Chat</a>
+                            </td>
+                            <td><?php echo $url;?></td>
                             <td>
-                                <a href="procesoProyecto.php"
-                                    class="btn  custom-btn-message custom-border-btn">Crear</a>
                                 <a href="procesoProyecto.php"
                                     class="btn  custom-btn-message custom-border-btn">Actualizar</a>
                             </td>
-                            <td> <a href="procesoProyecto.php"
-                                    class="btn px-5 custom-btn-message custom-border-btn">Chat</a>
-                            </td>
+                            
                             <td></td>
                         </tr>
+                        <?php } ?>
 
                     </tbody>
 
                 </table>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">
+                                    Crear
+                                </button>
             </div>
 
 
@@ -200,3 +216,60 @@
 </body>
 
 </html>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Crear nuevo Proyecto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="php/crud_proyecto.php" method="POST">
+                <div class="modal-body">
+                    <input class="form-control my-2 py-3" type="text" name="nombre_proyecto" 
+                    placeholder="Nombre del Proyecto"     aria-label="default input example" id="nombre_proyecto">
+                    <select class="form-select my-2" aria-label="Default select example" name="cliente" id="cliente">
+                        <option selected>Seleccionar Cliente</option>
+                        <?php
+                        require "php/conexion.php";
+                        $sql = "SELECT * FROM usuario WHERE rol_usuario=0";
+                        $result = mysqli_query($conexion, $sql);
+                        while ($mostrar = mysqli_fetch_array($result)) {
+                            $id_usuario = $mostrar['id_usuario'];
+                            $nombre_usuario = $mostrar['nombres_usuario'];
+                            ?>
+                            <option value="<?php echo $id_usuario; ?>"><?php echo $nombre_usuario ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+                    <select class="form-select my-2" aria-label="Default select example" name="categoria"  id="categoria">
+                        <option selected>Seleccionar Categoria</option>
+                        <?php
+                        require "php/conexion.php";
+                        $sql = "SELECT * FROM categoria";
+                        $result = mysqli_query($conexion, $sql);
+                        while ($mostrar = mysqli_fetch_array($result)) {
+                            $id_categoria = $mostrar['id_categoria'];
+                            $nombre_categoria = $mostrar['nombre_categoria'];
+                            ?>
+                            <option value="<?php echo $id_categoria; ?>"><?php echo $nombre_categoria ?></option>
+                            <?php
+                        }
+                        ?>
+                    </select>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Registrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

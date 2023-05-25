@@ -10,6 +10,7 @@
   <!-- CSS FILES -->
   <link href="css/bootstrap.min.css" rel="stylesheet" />
   <link href="css/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/chatbot.css" rel="stylesheet" />
   <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <?php
@@ -240,7 +241,7 @@
 
           <div class="row d-flex mt-4">
             <div class="col-lg-6 col-md-5 col-12">
-              <img src="images/" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
+              <img src="images/about2.jpeg"  class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
             </div>
 
             <div class="col-lg-5 col-md-7 col-12">
