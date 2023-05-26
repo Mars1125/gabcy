@@ -250,7 +250,7 @@ session_start();
             id_etapa = $('#id_etapa1').val();
             url = $('#url1').val();
 
-            cadena = "id_proyecto=" + id_proyecto + "&nombre_proyecto=" + nombre_proyecto + "&id_cliente=" + id_cliente + "&id_etapa=" + id_etapa + "&url=" + url;
+            cadena = "id_proyecto=" + id_proyecto + "&nombre_proyecto1=" + nombre_proyecto + "&id_cliente1=" + id_cliente + "&id_etapa1=" + id_etapa + "&url1=" + url;
 
             $.ajax({
                 type: "POST",
