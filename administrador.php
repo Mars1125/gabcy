@@ -250,7 +250,7 @@ session_start();
             id_etapa = $('#id_etapa1').val();
             url = $('#url1').val();
 
-            cadena = "id_proyecto=" + id_proyecto + "&nombre_proyecto1=" + nombre_proyecto + "&id_cliente1=" + id_cliente + "&id_etapa1=" + id_etapa + "&url1=" + url;
+            cadena = "id_proyecto1=" + id_proyecto + "&nombre_proyecto1=" + nombre_proyecto + "&id_cliente1=" + id_cliente + "&id_etapa1=" + id_etapa + "&url1=" + url;
 
             $.ajax({
                 type: "POST",
@@ -280,6 +280,8 @@ session_start();
             </div>
             <form action="php/actualizar_proyecto.php" method="POST">
                 <div class="modal-body">
+                    <input class="form-control my-2 py-3" type="text" name="id_proyecto1" id="id_proyecto1"
+                        placeholder="ID Proyecto" aria-label="default input example" readonly>
                     <input class="form-control my-2 py-3" type="text" name="nombre_proyecto1"
                         placeholder="Nombre del Proyecto" aria-label="default input example" id="nombre_proyecto1">
                     <select class="form-select my-2" aria-label="Default select example" name="id_cliente1"
@@ -339,7 +341,7 @@ session_start();
                 <div class="modal-body">
                     <input class="form-control my-2 py-3" type="text" name="nombre_proyecto"
                         placeholder="Nombre del Proyecto" aria-label="default input example" id="nombre_proyecto">
-                    <select class="form-select my-2" aria-label="Default select example" name="cliente" id="cliente">
+                    <select class="form-select my-2" aria-label="Default select example" name="id_cliente" id="id_cliente">
                         <option selected>Seleccionar Cliente</option>
                         <?php
                         require "php/conexion.php";
@@ -354,8 +356,8 @@ session_start();
                         }
                         ?>
                     </select>
-                    <select class="form-select my-2" aria-label="Default select example" name="categoria"
-                        id="categoria">
+                    <select class="form-select my-2" aria-label="Default select example" name="id_categoria"
+                        id="id_categoria">
                         <option selected>Seleccionar Categoria</option>
                         <?php
                         require "php/conexion.php";

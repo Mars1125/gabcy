@@ -1,7 +1,7 @@
 <?php
 session_start();
 require "conexion.php";
-$id_proyecto = $_POST['id_proyecto'];
+$id_proyecto = $_POST['id_proyecto1'];
 $nombre_proyecto = $_POST['nombre_proyecto1'];
 $cliente = $_POST['id_cliente1'];
 $id_etapa = $_POST['id_etapa1'];
