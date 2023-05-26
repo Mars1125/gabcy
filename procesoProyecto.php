@@ -102,7 +102,7 @@ while ($row = mysqli_fetch_array($resTraerProyectos)) {
                 <p class="px-5">Chat</p>
             </div>
         </div>
-        <div class="row border border-top-0 border-dark-subtle ">
+        <div class="row border border-top-0 border-dark-subtle" max-height="750px">
             <div class="col-lg-3 col-md-3 d-sm-block col-sm-12">
                 <h6 class="mt-3">
                     <?php if (empty($nombre_proyecto)) {
@@ -113,7 +113,7 @@ while ($row = mysqli_fetch_array($resTraerProyectos)) {
                     } ?>
                 </h6>
             </div>
-            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12">
+            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12"  max-height="750px">
                 <?php
                 require "php/conexion.php";
                 $sql1 = "SELECT * FROM conversacion WHERE id_proyecto = '$id_proyecto'";
