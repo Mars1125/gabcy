@@ -1,8 +1,7 @@
 <?php
 require "conexion.php";
 $nombre_proyecto = $_POST['nombre_proyecto'];
-$cliente = $_POST['cliente'];
-$categoria = $_POST['categoria'];
+$cliente = $_POST['id_cliente'];
 $id = uniqid();
 $id_conversacion = uniqid();
 $registrar = "INSERT into proyecto (id_proyecto,nombre_proyecto,fecha_inicio_proyecto,id_usuario,id_categoria)

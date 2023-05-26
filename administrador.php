@@ -298,22 +298,6 @@ session_start();
                         }
                         ?>
                     </select>
-                    <select class="form-select my-2" aria-label="Default select example" name="id_categoria1"
-                        id="id_categoria1">
-                        <option selected>Seleccionar Categoria</option>
-                        <?php
-                        require "php/conexion.php";
-                        $sql = "SELECT * FROM categoria";
-                        $result = mysqli_query($conexion, $sql);
-                        while ($mostrar = mysqli_fetch_array($result)) {
-                            $id_categoria = $mostrar['id_categoria'];
-                            $nombre_categoria = $mostrar['nombre_categoria'];
-                            ?>
-                            <option value="<?php echo $id_categoria; ?>"><?php echo $nombre_categoria ?></option>
-                            <?php
-                        }
-                        ?>
-                    </select>
                     <select class="form-select my-2" aria-label="Default select example" name="id_etapa1"
                         id="id_etapa1">
                         <option selected>Seleccionar Etapa</option>
@@ -335,7 +319,7 @@ session_start();
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Registrar</button>
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
                 </div>
             </form>
         </div>
