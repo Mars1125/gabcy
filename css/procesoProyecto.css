@@ -74,3 +74,29 @@ section{
 
 }
 
+.one, .two, .three, .four, .five{
+    position:absolute;
+	margin-top:-10px !important;
+	z-index:1;
+    padding: 10px !important;
+	height:50px !important;
+	width:50px !important;
+	border-radius:25px !important;
+	
+}
+.one{
+	left:20%;
+}
+.two{
+	left:40%;
+}
+.three{
+	left:60%;
+}
+.four{
+    left:80%;
+}
+.five{
+    left:100%;
+}
+

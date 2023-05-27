@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="utf-8" />
@@ -16,8 +16,6 @@
   <?php
   session_start();
   require "php/enviarDuda.php";
-
-
   ?>
 </head>
 
@@ -91,15 +89,26 @@
               <a class="nav-link custom-btn custom-border-btn btn" href="registro.php">Registrarse</a>
             </li>
             <?php
-          } else {
-            ?>
-            <li class="nav-item">
-              <a class="nav-link click-scroll" href="procesoProyecto.php">Ver mi proyecto</a>
-            </li>
-            <li class="nav-item ms-3">
-              <a class="nav-link custom-btn custom-border-btn btn" href="php/cerrarSesion.php">Cerrar Sesión</a>
-            </li>
-            <?php
+          } elseif (!empty($_SESSION['id_usuario'])) {
+            $rol_usuario = $_SESSION['rol_usuario'];
+            if ($rol_usuario == 0) {
+              ?>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="panelGeneral.php">Panel General</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link custom-btn custom-border-btn btn" href="php/cerrarSesion.php">Cerrar Sesión</a>
+              </li>
+            <?php } elseif ($rol_usuario == 1) {
+              ?>
+              <li class="nav-item">
+                <a class="nav-link click-scroll" href="administrador.php">Panel de Administrador</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link custom-btn custom-border-btn btn" href="php/cerrarSesion.php">Cerrar Sesión</a>
+              </li>
+              <?php
+            }
           }
           ?>
         </ul>
@@ -241,7 +250,7 @@
 
           <div class="row d-flex mt-4">
             <div class="col-lg-6 col-md-5 col-12">
-              <img src="images/about2.jpeg"  class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
+              <img src="images/about2.jpeg" class="about-image ms-lg-auto bg-light shadow-lg img-fluid" alt="" />
             </div>
 
             <div class="col-lg-5 col-md-7 col-12">
@@ -508,43 +517,45 @@
 
           <div class="col-lg-5 col-12 mx-auto">
             <?php
-                if(count($info) == 1){
-                    ?>
-                    <div class="alert alert-success text-center">
-                        <?php
-                        foreach($info as $showinfo){
-                            echo $showinfo;
-                        }
-                        ?>
-                    </div>
-                    <?php
+            if (count($info) == 1) {
+              ?>
+              <div class="alert alert-success text-center">
+                <?php
+                foreach ($info as $showinfo) {
+                  echo $showinfo;
                 }
-            ?>            
+                ?>
+              </div>
+              <?php
+            }
+            ?>
             <?php
-                if(count($errores) == 1){
-                    ?>
-                    <div class="alert alert-danger text-center">
-                        <?php
-                        foreach($errores as $showerror){
-                            echo $showerror;
-                        }
-                        ?>
-                    </div>
-                    <?php
-                }elseif(count($errores) > 1){
-                    ?>
-                    <div class="alert alert-danger">
-                        <?php
-                        foreach($errores as $showerror){
-                            ?>
-                            <li><?php echo $showerror; ?></li>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                    <?php
+            if (count($errores) == 1) {
+              ?>
+              <div class="alert alert-danger text-center">
+                <?php
+                foreach ($errores as $showerror) {
+                  echo $showerror;
                 }
-            ?>            
+                ?>
+              </div>
+              <?php
+            } elseif (count($errores) > 1) {
+              ?>
+              <div class="alert alert-danger">
+                <?php
+                foreach ($errores as $showerror) {
+                  ?>
+                  <li>
+                    <?php echo $showerror; ?>
+                  </li>
+                  <?php
+                }
+                ?>
+              </div>
+              <?php
+            }
+            ?>
             <form class="custom-form contact-form" id="contactoForm" method="POST" role="form">
               <h3>Formulario de Contacto</h3>
               <p class="mb-4">
@@ -569,18 +580,19 @@
               -->
               <textarea name="message" rows="5" class="form-control" id="message"
                 placeholder="Como puedo ayudarte?"></textarea>
-              
+
               <?php
-                if (!empty($_SESSION['correo_usuario'])) {
-              ?>
-              <button name="enviarCita" type="submit" id="enviarCita" class="form-control">Enviar</button>
-              <?php
-                }else{
-              ?>
-              <button type="submit" name="enviarCita" disabled class="form-control">Enviar</button>
-              <p class="text-center mt-3">Necesitas iniciar sesión para agendar una cita. <a href="iniciarSesion.php">Inicia sesión.</a></p>
-              <?php
-                }
+              if (!empty($_SESSION['correo_usuario'])) {
+                ?>
+                <button name="enviarCita" type="submit" id="enviarCita" class="form-control">Enviar</button>
+                <?php
+              } else {
+                ?>
+                <button type="submit" name="enviarCita" disabled class="form-control">Enviar</button>
+                <p class="text-center mt-3">Necesitas iniciar sesión para agendar una cita. <a
+                    href="iniciarSesion.php">Inicia sesión.</a></p>
+                <?php
+              }
               ?>
             </form>
           </div>

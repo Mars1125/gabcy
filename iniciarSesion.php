@@ -22,13 +22,6 @@
     require "php/inicioSesion.php";
 
     ?>
-    <!--
-
-TemplateMo 581 Kind Heart Charity
-
-https://templatemo.com/tm-581-kind-heart-charity
-
--->
 </head>
 
 <body>

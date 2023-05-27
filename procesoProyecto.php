@@ -94,6 +94,29 @@ while ($row = mysqli_fetch_array($resTraerProyectos)) {
         </div>
     </nav>
     <div class="container container-general pb-5 pt-5">
+        <div class="container pb-5">
+            <div class="progress">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+                <div class="four"></div>
+                <div class="five"></div>
+                <div class="progress-bar progress-bar-info" <?php 
+                if ($idEtapa==1 && $estadoEtapa=='En proceso') {
+                    echo "success-color style='width: 20%'";
+                }elseif ($idEtapa==2 && $estadoEtapa=='En proceso') {
+                    echo "success-color style='width: 40%'";
+                }elseif ($idEtapa==3 && $estadoEtapa=='En proceso') {
+                    echo "success-color style='width: 60%'";
+                }elseif ($idEtapa==4 && $estadoEtapa=='En proceso') {
+                    echo "success-color style='width: 80%'";
+                }elseif ($idEtapa==5 && $estadoEtapa=='En proceso') {
+                    echo "success-color style='width: 100%'";
+                }
+                ?>
+                ></div>
+            </div>
+        </div>
         <div class="row container-title py-1 rounded-3 border border-dark-subtle ">
             <div class="col-lg-3 col-md-3 d-sm-block col-sm-12 mt-2">
                 <p>Proyecto</p>
@@ -113,47 +136,47 @@ while ($row = mysqli_fetch_array($resTraerProyectos)) {
                     } ?>
                 </h6>
             </div>
-            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12"  max-height="750px">
+            <div class="col-lg-9 col-md-9 d-sm-block col-sm-12" max-height="750px">
                 <?php
                 require "php/conexion.php";
                 $sql1 = "SELECT * FROM conversacion WHERE id_proyecto = '$id_proyecto'";
                 $result1 = mysqli_query($conexion, $sql1);
-                    while ($row1 = mysqli_fetch_array($result1)) {
-                        $id_conversacion = $row1['id_conversacion'];
-                        $sql = "SELECT * FROM mensaje WHERE id_conversacion = '$id_conversacion'";
-                        $result = mysqli_query($conexion, $sql);
-                        while ($row = mysqli_fetch_array($result)) {
-                            $_SESSION['id_conversacion'] = $row['id_conversacion'];
-                            $id_mensaje = $row['id_mensaje'];
-                            $id_usuario_envia = $row['id_usuario_envia'];
-                            $mensaje = $row['texto_mensaje'];
-                            $fecha = $row['fecha_mensaje'];
-                            $sql2 = "SELECT * FROM usuario WHERE id_usuario = '$id_usuario_envia'";
+                while ($row1 = mysqli_fetch_array($result1)) {
+                    $id_conversacion = $row1['id_conversacion'];
+                    $sql = "SELECT * FROM mensaje WHERE id_conversacion = '$id_conversacion'";
+                    $result = mysqli_query($conexion, $sql);
+                    while ($row = mysqli_fetch_array($result)) {
+                        $_SESSION['id_conversacion'] = $row['id_conversacion'];
+                        $id_mensaje = $row['id_mensaje'];
+                        $id_usuario_envia = $row['id_usuario_envia'];
+                        $mensaje = $row['texto_mensaje'];
+                        $fecha = $row['fecha_mensaje'];
+                        $sql2 = "SELECT * FROM usuario WHERE id_usuario = '$id_usuario_envia'";
 
-                            $result2 = mysqli_query($conexion, $sql2);
-                            while ($row2 = mysqli_fetch_array($result2)) {
-                                $nombre_usuario = $row2['nombres_usuario'];
-                                $apellido_usuario = $row2['apellidos_usuario'];
-                                $empresa_usuario = $row2['empresa_usuario'];
-                                $rol_usuario = $row2['rol_usuario'];
-                                $nombre_completo = $nombre_usuario . " " . $apellido_usuario . " - " . $empresa_usuario;
-                                ?>
-                                <p class="text-center message-date mt-4 fw-semibold">
-                                    <?php echo $fecha; ?>
-                                </p>
-                                <p class="fw-semibold message-date">
-                                    <?php echo $nombre_completo ?>
-                                </p>
-                                <p class="px-5 py-2 mt-3 message-client rounded-5 rounded-end-circle 
+                        $result2 = mysqli_query($conexion, $sql2);
+                        while ($row2 = mysqli_fetch_array($result2)) {
+                            $nombre_usuario = $row2['nombres_usuario'];
+                            $apellido_usuario = $row2['apellidos_usuario'];
+                            $empresa_usuario = $row2['empresa_usuario'];
+                            $rol_usuario = $row2['rol_usuario'];
+                            $nombre_completo = $nombre_usuario . " " . $apellido_usuario . " - " . $empresa_usuario;
+                            ?>
+                            <p class="text-center message-date mt-4 fw-semibold">
+                                <?php echo $fecha; ?>
+                            </p>
+                            <p class="fw-semibold message-date">
+                                <?php echo $nombre_completo ?>
+                            </p>
+                            <p class="px-5 py-2 mt-3 message-client rounded-5 rounded-end-circle 
                             <?php if ($rol_usuario == 1)
                                 echo "bg-primary text-white"; ?>
                             ">
-                                    <?php echo $mensaje; ?>
-                                </p>
-                                <?php
-                            }
+                                <?php echo $mensaje; ?>
+                            </p>
+                            <?php
                         }
                     }
+                }
                 ?>
                 <div>
                     <form action="php/enviarMensaje.php" method="POST">
