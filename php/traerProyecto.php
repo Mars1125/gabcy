@@ -9,6 +9,8 @@ if($rolUsuario=='0'){
     FROM proyecto 
     WHERE id_usuario='$idUsuario'";
     $resTraerProyectos=mysqli_query($conexion,$consTraerProyectos);
+    $rowTraerProyectos=mysqli_fetch_array($resTraerProyectos);
+    $id_proyecto=$rowTraerProyectos['id_proyecto'];
     $traerEtapa="SELECT id_etapa,estado FROM etapa_proyecto 
     WHERE id_proyecto='$id_proyecto' ORDER BY id_etapa DESC LIMIT 1";
     $resTraerEtapa=mysqli_query($conexion,$traerEtapa);
